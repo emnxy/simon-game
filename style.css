@@ -1,0 +1,124 @@
+* {
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.simon-game {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.color-box {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+#green { background-color: green; }
+#red { background-color: red; }
+#yellow { background-color: yellow; }
+#blue { background-color: blue; }
+
+#start-game, #register-btn, #play-btn, #ranking-btn, #back-btn, #back-ranking-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.active {
+    opacity: 1 !important;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
